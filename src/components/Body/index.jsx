@@ -1,14 +1,15 @@
 import React from 'react'
 import './index.css'
 import data1 from './json/data1.json'
-
-export default function index (){
+const {useState}=React
+export default function Index (){
+    const[active,setActive]=useState(false)
     const newdata = data1.filter(function(item, index, array){
         return item.date ==='2017/05/05'; 
       });
-    
+    const Change=()=>setActive(active=true)
+    const ActiveClass = active ?"active day":"day"
     console.log(data1);
-    console.log(newdata);
     return (
         <div className="calendars"> 
             <div className="calendars_tabWrap">
@@ -91,8 +92,8 @@ export default function index (){
                                         </div>
                                     </div>
                                 </td>
-                                <td className='currentDays hasData' date="2017/05/05">
-                                <div className='day'>
+                                <td  className='currentDays hasData' date="2017/05/05">
+                                <div className={ActiveClass}>
                                         <span className='num'>5</span>
                                         <div className='details'>
                                         <span className='status'> <a href="" className='alternate'>請洽專員</a></span><br />
@@ -103,7 +104,7 @@ export default function index (){
                                                 <i className='js_group'>{newdata[newdata.length-1].totalVacnacy}</i>
                                             </span>
                                             <span className='price'>
-                                            ${newdata[0].price}
+                                            ${newdata[newdata.length-1].price}
                                             </span>
                                         </div>
                                     </div>
@@ -285,6 +286,9 @@ export default function index (){
                                 </td>
                             </tr>
                         </tbody>
+                        <tfoot>
+
+                        </tfoot>
                     </table>
                 </div>
             </div>
