@@ -48,6 +48,9 @@ span{
     flex-direction: row;
     margin-top: 0px;
 }
+.otherMonthDay{
+    visibility: hidden;
+}
 
 .tab>a{
     text-decoration: none;
@@ -74,6 +77,8 @@ span{
 .table_width > th{
     width: 72px;
     border: 1px solid rgba(228, 222, 222, 0.507);
+    color: rgb(126, 124, 122);
+    font-weight: bolder;
 }
 
 .table_width > td{
@@ -83,9 +88,7 @@ span{
     height: 110px;
     border: 1px solid rgba(228, 222, 222, 0.507);
 }
-.disabled{
-    background-color: rgba(228, 222, 222, 0.507);
-}
+
 .price{
     color: red;
 }
@@ -115,8 +118,23 @@ span{
     color: brown;
 }
 td:hover{
-    border: 1px solid rgb(221, 210, 149);
+    background-color: beige;
 }
 .active{
     border: 1px solid yellow;
+}
+.chooseMonth{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.otherMonth{
+    display: none;
+}
+.border{
+    border: 2px solid rgb(97, 185, 97) !important;
+    background-color: aliceblue;
+}
+.click{
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px;
 }
