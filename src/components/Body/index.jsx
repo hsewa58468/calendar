@@ -69,7 +69,7 @@ export default function Hook_index (){
                                             <div className='details'>
                                                 <span className='status'>{newdata[newdata.length-1].status}</span>
                                                 <br />
-                                                <span className='sell'>可賣:
+                                                <span className='sell'>餘位:
                                                     <i className='js_sell'>{newdata[newdata.length-1].availableVancancy}</i>
                                                 </span>
                                                 <span className='group'>團位
@@ -108,7 +108,7 @@ export default function Hook_index (){
             <div className="month">
                 <div className='main'>
                     <table className='month_table'>
-                        <thread>
+                        <thead>
                             <tr className='week table_width'>
                                 <th>星期日</th>
                                 <th>星期一</th>
@@ -118,8 +118,7 @@ export default function Hook_index (){
                                 <th>星期五</th>
                                 <th>星期六</th>
                             </tr>
-                        </thread>
-
+                        </thead>
                         <tbody>
                             {returnDatesJSX(2017,5)}
                             {returnDatesJSX(2017,6)}
