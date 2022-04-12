@@ -92,6 +92,25 @@ span{
 .price{
     color: red;
 }
+.dayNum{
+    min-width: 20px;
+    text-align: center;
+}
+.onschedule{
+    position: relative;
+    left: 20px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    color: white;
+    background-color: orange;
+    font-weight: bolder;
+    padding: 3px;
+}
+.nonschedule{
+    display: none;
+}
+
 
 
 /* 狀態改變 */
