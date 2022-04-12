@@ -4,8 +4,6 @@ span{
     font-weight: bold;
 }
 .calendars{
-    display: flex;
-    align-items: flex-end;
     box-sizing: border-box;
     color: rgb(68, 68, 68);
     display :block;
@@ -92,6 +90,25 @@ span{
 .price{
     color: red;
 }
+.dayNum{
+    min-width: 20px;
+    text-align: center;
+}
+.onschedule{
+    position: relative;
+    left: 20px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    color: white;
+    background-color: orange;
+    font-weight: bolder;
+    padding: 3px;
+}
+.nonschedule{
+    display: none;
+}
+
 
 
 /* 狀態改變 */

@@ -63,19 +63,26 @@ export default function Hook_index (){
                                         </td>
                                 )}
                                 else{
+                                    const target=newdata[newdata.length-1]
                                     return(
                                         <td key={targetIndex} className={`currentDays ${whitch_Day_Has_border===targetIndex? 'border' : ''}`} onClick={()=>addDayBorder(targetIndex)}>
-                                            <div className='day'>{targetIndex-otherMonthDay+1}</div>
+                                            <div className='day'>
+                                                <span className='dayNum'>{targetIndex-otherMonthDay+1}</span>
+                                                <span className={`onschedule ${target.availableVancancy>target.totalVacnacy?'nonschedule':'onschedule'}`}>成團</span>
+                                            </div>
+                                            
                                             <div className='details'>
-                                                <span className='status'>{newdata[newdata.length-1].status}</span>
+                                                <span className='status'>{target.status}</span>
                                                 <br />
                                                 <span className='sell'>餘位:
-                                                    <i className='js_sell'>{newdata[newdata.length-1].availableVancancy}</i>
+                                                    <i className='js_sell'>{target.availableVancancy}</i>
                                                 </span>
-                                                <span className='group'>團位
-                                                    <i className='js_group'>{newdata[newdata.length-1].totalVacnacy}</i>
+                                                <br />
+                                                <span className='group'>團位:
+                                                    <i className='js_group'>{target.totalVacnacy}</i>
                                                 </span>
-                                                <span className='price'>${newdata[newdata.length-1].price}</span>
+                                                <br />
+                                                <span className='price'>${target.price}</span>
                                             </div>
                                         </td> 
                                 )}
