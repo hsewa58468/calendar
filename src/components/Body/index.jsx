@@ -54,7 +54,7 @@ export default function Hook_index (){
                             
                             else{   
                                 const newdata=data1.filter(function(item){
-                                    return item.date === moment([year,month-1,targetIndex]).format("YYYY/MM/DD");    
+                                    return item.date === moment([year,month-1,targetIndex-otherMonthDay+1]).format("YYYY/MM/DD");    
                                 }) 
                                 if(newdata[0]==undefined){
                                     return(
