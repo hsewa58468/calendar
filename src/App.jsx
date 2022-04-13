@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import './App.css'
-import Body from './components/Body'
+import Head from './components/Head'
 
 export default class App extends Component {
   render() {
     return (
-      <div>
-          <Body/>
+      <div >
+          <Head/>
       </div>
     )
   }

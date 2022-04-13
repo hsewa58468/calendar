@@ -12,7 +12,9 @@ span{
     line-height: 21px;
     position: relative;
     text-size-adjust: 100%;
-    width: 50%;
+    width: 500px;
+    position: relative;
+    left: 50px;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .calendars_tabWrap{
